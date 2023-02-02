@@ -28,6 +28,11 @@ Dovile's article offers a few suggestions to consider when writing your project 
 > 
 > 6. **Write about who you are.** The best vision statements are about who you are as a company or team and who you wish to become.
 
-## Contracted Grade
+# Project Vision Statement for Group 27
+---
+<div align="center"><em><strong>Investigate and analysis credit that quickly determine the trustworth clients to minimize the risk.  </strong></em></div>
 
-For this project, we agree to contract for a { A+/A/B/C }.
+## Contracted Grade
+---
+
+For this project, we agree to contract for a { <strong>A+</strong> }.
