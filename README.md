@@ -1,4 +1,4 @@
-# Group YY - {Short snappy Title of your project}
+# Group 27 - {Short snappy Title of your project}
 
 - Your title can change over time.
 
@@ -19,14 +19,15 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 ## Team Members
 
 - Person 1: one sentence about you!
-- Person 2: one sentence about you!
-- Person 3: one sentence about you!
+- Person 2: My name is Shirley, I am a third-year student majoring in statistics, and I like to play tennis. 
+- Person 3: My name is Remy, I am a second-year psychology student, and my hobby is watching Netflix.
 
 ## Images
 
 {You should use this area to add a screenshot of an interesting plot, or of your dashboard}
 
 <img src ="images/test.png" width="100px">
+
 
 ## References
 
