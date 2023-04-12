@@ -6,6 +6,8 @@
     <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
     <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <CollapsiblePane />
     <Heatmap />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
@@ -14,7 +16,10 @@
     <SetMembershipControl />
     <SheetIdentifierTracking />
     <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
+    <ZoneFriendlyName />
+    <ZoneVisibilityControl />
   </document-format-change-manifest>
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
@@ -860,12 +865,9 @@
           </datasources>
           <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
             <column caption='Limit Bal' datatype='integer' name='[LIMIT_BAL]' role='measure' type='quantitative' />
-            <column caption='SEX (bin)' datatype='integer' name='[SEX (bin)]' role='dimension' type='ordinal'>
-              <calculation class='bin' decimals='-3' formula='[SEX]' peg='0' size='0.303' />
-            </column>
             <column datatype='integer' name='[SEX]' role='measure' type='quantitative' />
             <column-instance column='[LIMIT_BAL]' derivation='None' name='[none:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[SEX (bin)]' derivation='None' name='[none:SEX (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SEX]' derivation='None' name='[none:SEX:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
@@ -875,11 +877,11 @@
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Automatic' />
+            <mark class='Bar' />
           </pane>
         </panes>
-        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:SEX (bin):ok]</rows>
-        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</cols>
+        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:SEX:qk]</cols>
         <show-full-range>
           <column>[federated.0urnys309fqrla12p8hc80hhzxwb].[SEX (bin)]</column>
         </show-full-range>
@@ -907,17 +909,13 @@
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
-        <style>
-          <style-rule element='axis'>
-            <format attr='height' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:EDUCATION:qk]' value='54' />
-          </style-rule>
-        </style>
+        <style />
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Line' />
+            <mark class='Heatmap' />
           </pane>
         </panes>
         <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</rows>
@@ -1656,6 +1654,214 @@ Sub - Q3: I plan to investigate how a client’s previous payment behaviour, suc
       </devicelayouts>
       <simple-id uuid='{83F3F7A0-2BF7-4C19-845D-88B5BD320FAD}' />
     </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 4'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='4000' id='3' param='horz' type-v2='layout-flow' w='3200' x='800' y='1000'>
+            <zone h='4000' hidden-by-user='true' id='5' param='horz' type-v2='layout-flow' w='3200' x='800' y='1000'>
+              <zone h='4000' hidden-by-user='true' id='8' name='Sheet 3' w='1066' x='800' y='1000'>
+                <layout-cache minwidth='174' type-h='fixed' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4000' hidden-by-user='true' id='7' name='Sheet 2' w='1066' x='1866' y='1000'>
+                <layout-cache minwidth='174' type-h='fixed' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4000' hidden-by-user='true' id='6' name='Sheet 1' w='1068' x='2932' y='1000'>
+                <layout-cache minheight='198' minwidth='174' type-h='scalable' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='94000' hidden-by-user='true' id='11' param='horz' type-v2='layout-flow' w='3200' x='800' y='5000'>
+            <zone h='94000' hidden-by-user='true' id='13' name='Sheet 6' w='1600' x='800' y='5000'>
+              <layout-cache minwidth='166' type-h='fixed' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='94000' hidden-by-user='true' id='12' name='Sheet 5' w='1600' x='2400' y='5000'>
+              <layout-cache minheight='699' minwidth='176' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='98000' hidden-by-user='true' id='15' param='horz' type-v2='layout-flow' w='95200' x='4000' y='1000'>
+            <zone h='98000' hidden-by-user='true' id='16' name='Sheet 7' w='95200' x='4000' y='1000'>
+              <layout-cache minwidth='176' type-h='fixed' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone friendly-name='D3' h='3000' id='17' type-v2='dashboard-object' w='2400' x='90800' y='42250'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{EFFC8650-C19D-4A29-A4CD-4086373AE97B}&quot; zone-id=&quot;17&quot; zone-ids=[15]</toggle-action>
+            <button-visual-state />
+            <button-visual-state />
+          </button>
+        </zone>
+        <zone h='3000' id='18' type-v2='dashboard-object' w='2400' x='4000' y='1000'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{EFFC8650-C19D-4A29-A4CD-4086373AE97B}&quot; zone-id=&quot;18&quot; zone-ids=[5]</toggle-action>
+            <button-visual-state />
+            <button-visual-state />
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{DDA245AC-2A03-42A9-ADA0-2B23D40612C7}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 5'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49062' id='3' param='vert' type-v2='layout-flow' w='98370' x='815' y='938'>
+            <zone h='3517' id='5' param='horz' type-v2='layout-flow' w='98370' x='815' y='938'>
+              <zone fixed-size='41' h='49118' hidden-by-user='true' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='98370' x='815' y='938'>
+                <zone h='16374' hidden-by-user='true' id='7' name='Sheet 1' w='98370' x='815' y='938'>
+                  <layout-cache minheight='198' minwidth='174' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='16370' hidden-by-user='true' id='9' name='Sheet 3' w='98370' x='815' y='17312'>
+                  <layout-cache minheight='198' minwidth='174' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='16374' hidden-by-user='true' id='8' name='Sheet 2' w='98370' x='815' y='33682'>
+                  <layout-cache minheight='198' minwidth='174' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone h='45545' id='11' param='horz' type-v2='layout-flow' w='98370' x='815' y='4455'>
+              <zone h='45545' id='12' param='vert' type-v2='layout-flow' w='98370' x='815' y='4455'>
+                <zone h='22772' id='13' name='Sheet 5' w='98370' x='815' y='4455'>
+                  <layout-cache minheight='699' minwidth='176' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='22773' id='14' name='Sheet 6' w='98370' x='815' y='27227'>
+                  <layout-cache minheight='198' minwidth='166' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='49062' id='16' param='horz' type-v2='layout-flow' w='98370' x='815' y='50000' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone friendly-name='1' h='3000' id='10' type-v2='dashboard-object' w='2400' x='0' y='1000'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{111C8BD0-FBAC-4B43-935F-95868293691C}&quot; zone-id=&quot;10&quot; zone-ids=[6]</toggle-action>
+            <button-visual-state />
+            <button-visual-state />
+          </button>
+        </zone>
+        <zone friendly-name='2' h='3000' id='15' type-v2='dashboard-object' w='2400' x='5500' y='1875'>
+          <button action=''>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{111C8BD0-FBAC-4B43-935F-95868293691C}&quot; zone-id=&quot;15&quot; zone-ids=[11]</toggle-action>
+            <button-visual-state />
+            <button-visual-state />
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C0775ABA-E4E8-4A28-96E5-48E3BB0E72E9}' />
+    </dashboard>
   </dashboards>
   <windows source-height='30'>
     <window class='worksheet' name='Sheet 1'>
@@ -1681,7 +1887,7 @@ Sub - Q3: I plan to investigate how a client’s previous payment behaviour, suc
       </cards>
       <simple-id uuid='{8604C251-0441-4B56-9BBD-696FBFC3143D}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 2'>
+    <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1834,7 +2040,7 @@ Sub - Q3: I plan to investigate how a client’s previous payment behaviour, suc
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='8' />
+      <active id='23' />
       <simple-id uuid='{BCD6EDCB-62F4-4FEC-8C82-389858DB386D}' />
     </window>
     <window class='dashboard' name='Dashboard 2'>
@@ -1846,7 +2052,7 @@ Sub - Q3: I plan to investigate how a client’s previous payment behaviour, suc
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='6' />
+      <active id='-1' />
       <simple-id uuid='{936787D4-B182-4DFC-AE4E-0FC7ED954CCC}' />
     </window>
     <window class='dashboard' name='Dashboard 3'>
@@ -1857,6 +2063,51 @@ Sub - Q3: I plan to investigate how a client’s previous payment behaviour, suc
       </viewpoints>
       <active id='-1' />
       <simple-id uuid='{92B14DBA-77BA-4D13-825C-5FAC86AB4E96}' />
+    </window>
+    <window class='dashboard' name='Dashboard 4'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='17' />
+      <simple-id uuid='{EFFC8650-C19D-4A29-A4CD-4086373AE97B}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 5'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='16' />
+      <simple-id uuid='{111C8BD0-FBAC-4B43-935F-95868293691C}' />
     </window>
   </windows>
 </workbook>
