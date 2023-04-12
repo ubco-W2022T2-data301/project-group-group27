@@ -1,0 +1,1862 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.23.0312.0353                               -->
+<workbook original-version='18.1' source-build='2022.4.2 (20224.23.0312.0353)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Heatmap />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='df_cleaned1' inline='true' name='federated.0urnys309fqrla12p8hc80hhzxwb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='df_cleaned1' name='textscan.0xnm7jd0rkhfvq1141ogc1xu0954'>
+            <connection class='textscan' directory='Data/processed_data_Betty' filename='df_cleaned1.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='df_cleaned2' name='textscan.04xag3r054rh7618k3dyj1mur08h'>
+            <connection class='textscan' directory='Data/processed_data_Betty' filename='df_cleaned2.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='df_cleaned3' name='textscan.0d7hk830n0vn5y13kbrt20wi9yf8'>
+            <connection class='textscan' directory='Data/processed_data_Betty' filename='df_cleaned3.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[df_cleaned1.csv].[F1]' />
+              <expression op='[df_cleaned3.csv].[F1]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[df_cleaned1.csv].[F1]' />
+                <expression op='[df_cleaned2.csv].[F1]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.0xnm7jd0rkhfvq1141ogc1xu0954' name='df_cleaned1.csv' table='[df_cleaned1#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                <column datatype='integer' name='F1' ordinal='0' />
+                <column datatype='integer' name='LIMIT_BAL' ordinal='1' />
+                <column datatype='integer' name='SEX' ordinal='2' />
+                <column datatype='integer' name='EDUCATION' ordinal='3' />
+                <column datatype='integer' name='MARRIAGE' ordinal='4' />
+                <column datatype='integer' name='AGE' ordinal='5' />
+              </columns>
+            </relation>
+            <relation connection='textscan.04xag3r054rh7618k3dyj1mur08h' name='df_cleaned2.csv' table='[df_cleaned2#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                <column datatype='integer' name='F1' ordinal='0' />
+                <column datatype='integer' name='ID' ordinal='1' />
+                <column datatype='integer' name='LIMIT_BAL' ordinal='2' />
+                <column datatype='integer' name='PAY_0' ordinal='3' />
+                <column datatype='integer' name='PAY_2' ordinal='4' />
+                <column datatype='integer' name='PAY_3' ordinal='5' />
+                <column datatype='integer' name='PAY_4' ordinal='6' />
+                <column datatype='integer' name='PAY_5' ordinal='7' />
+                <column datatype='integer' name='PAY_6' ordinal='8' />
+                <column datatype='integer' name='BILL_AMT1' ordinal='9' />
+                <column datatype='integer' name='BILL_AMT2' ordinal='10' />
+                <column datatype='integer' name='BILL_AMT3' ordinal='11' />
+                <column datatype='integer' name='BILL_AMT4' ordinal='12' />
+                <column datatype='integer' name='BILL_AMT5' ordinal='13' />
+                <column datatype='integer' name='BILL_AMT6' ordinal='14' />
+                <column datatype='integer' name='PAY_AMT1' ordinal='15' />
+                <column datatype='integer' name='PAY_AMT2' ordinal='16' />
+                <column datatype='integer' name='PAY_AMT3' ordinal='17' />
+                <column datatype='integer' name='PAY_AMT4' ordinal='18' />
+                <column datatype='integer' name='PAY_AMT5' ordinal='19' />
+                <column datatype='integer' name='PAY_AMT6' ordinal='20' />
+                <column datatype='integer' name='default payment next month' ordinal='21' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.0d7hk830n0vn5y13kbrt20wi9yf8' name='df_cleaned3.csv' table='[df_cleaned3#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='integer' name='LIMIT_BAL' ordinal='1' />
+              <column datatype='integer' name='PB1' ordinal='2' />
+              <column datatype='integer' name='PB2' ordinal='3' />
+              <column datatype='integer' name='PB3' ordinal='4' />
+              <column datatype='integer' name='PB4' ordinal='5' />
+              <column datatype='integer' name='PB5' ordinal='6' />
+              <column datatype='integer' name='PB6' ordinal='7' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[df_cleaned1.csv].[F1]' />
+              <expression op='[df_cleaned3.csv].[F1]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[df_cleaned1.csv].[F1]' />
+                <expression op='[df_cleaned2.csv].[F1]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.0xnm7jd0rkhfvq1141ogc1xu0954' name='df_cleaned1.csv' table='[df_cleaned1#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                <column datatype='integer' name='F1' ordinal='0' />
+                <column datatype='integer' name='LIMIT_BAL' ordinal='1' />
+                <column datatype='integer' name='SEX' ordinal='2' />
+                <column datatype='integer' name='EDUCATION' ordinal='3' />
+                <column datatype='integer' name='MARRIAGE' ordinal='4' />
+                <column datatype='integer' name='AGE' ordinal='5' />
+              </columns>
+            </relation>
+            <relation connection='textscan.04xag3r054rh7618k3dyj1mur08h' name='df_cleaned2.csv' table='[df_cleaned2#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                <column datatype='integer' name='F1' ordinal='0' />
+                <column datatype='integer' name='ID' ordinal='1' />
+                <column datatype='integer' name='LIMIT_BAL' ordinal='2' />
+                <column datatype='integer' name='PAY_0' ordinal='3' />
+                <column datatype='integer' name='PAY_2' ordinal='4' />
+                <column datatype='integer' name='PAY_3' ordinal='5' />
+                <column datatype='integer' name='PAY_4' ordinal='6' />
+                <column datatype='integer' name='PAY_5' ordinal='7' />
+                <column datatype='integer' name='PAY_6' ordinal='8' />
+                <column datatype='integer' name='BILL_AMT1' ordinal='9' />
+                <column datatype='integer' name='BILL_AMT2' ordinal='10' />
+                <column datatype='integer' name='BILL_AMT3' ordinal='11' />
+                <column datatype='integer' name='BILL_AMT4' ordinal='12' />
+                <column datatype='integer' name='BILL_AMT5' ordinal='13' />
+                <column datatype='integer' name='BILL_AMT6' ordinal='14' />
+                <column datatype='integer' name='PAY_AMT1' ordinal='15' />
+                <column datatype='integer' name='PAY_AMT2' ordinal='16' />
+                <column datatype='integer' name='PAY_AMT3' ordinal='17' />
+                <column datatype='integer' name='PAY_AMT4' ordinal='18' />
+                <column datatype='integer' name='PAY_AMT5' ordinal='19' />
+                <column datatype='integer' name='PAY_AMT6' ordinal='20' />
+                <column datatype='integer' name='default payment next month' ordinal='21' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.0d7hk830n0vn5y13kbrt20wi9yf8' name='df_cleaned3.csv' table='[df_cleaned3#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='integer' name='LIMIT_BAL' ordinal='1' />
+              <column datatype='integer' name='PB1' ordinal='2' />
+              <column datatype='integer' name='PB2' ordinal='3' />
+              <column datatype='integer' name='PB3' ordinal='4' />
+              <column datatype='integer' name='PB4' ordinal='5' />
+              <column datatype='integer' name='PB5' ordinal='6' />
+              <column datatype='integer' name='PB6' ordinal='7' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[AGE]' value='[df_cleaned1.csv].[AGE]' />
+          <map key='[BILL_AMT1]' value='[df_cleaned2.csv].[BILL_AMT1]' />
+          <map key='[BILL_AMT2]' value='[df_cleaned2.csv].[BILL_AMT2]' />
+          <map key='[BILL_AMT3]' value='[df_cleaned2.csv].[BILL_AMT3]' />
+          <map key='[BILL_AMT4]' value='[df_cleaned2.csv].[BILL_AMT4]' />
+          <map key='[BILL_AMT5]' value='[df_cleaned2.csv].[BILL_AMT5]' />
+          <map key='[BILL_AMT6]' value='[df_cleaned2.csv].[BILL_AMT6]' />
+          <map key='[EDUCATION]' value='[df_cleaned1.csv].[EDUCATION]' />
+          <map key='[F1 (df_cleaned2.csv)]' value='[df_cleaned2.csv].[F1]' />
+          <map key='[F1 (df_cleaned3.csv)]' value='[df_cleaned3.csv].[F1]' />
+          <map key='[F1]' value='[df_cleaned1.csv].[F1]' />
+          <map key='[ID]' value='[df_cleaned2.csv].[ID]' />
+          <map key='[LIMIT_BAL (df_cleaned2.csv)]' value='[df_cleaned2.csv].[LIMIT_BAL]' />
+          <map key='[LIMIT_BAL (df_cleaned3.csv)]' value='[df_cleaned3.csv].[LIMIT_BAL]' />
+          <map key='[LIMIT_BAL]' value='[df_cleaned1.csv].[LIMIT_BAL]' />
+          <map key='[MARRIAGE]' value='[df_cleaned1.csv].[MARRIAGE]' />
+          <map key='[PAY_0]' value='[df_cleaned2.csv].[PAY_0]' />
+          <map key='[PAY_2]' value='[df_cleaned2.csv].[PAY_2]' />
+          <map key='[PAY_3]' value='[df_cleaned2.csv].[PAY_3]' />
+          <map key='[PAY_4]' value='[df_cleaned2.csv].[PAY_4]' />
+          <map key='[PAY_5]' value='[df_cleaned2.csv].[PAY_5]' />
+          <map key='[PAY_6]' value='[df_cleaned2.csv].[PAY_6]' />
+          <map key='[PAY_AMT1]' value='[df_cleaned2.csv].[PAY_AMT1]' />
+          <map key='[PAY_AMT2]' value='[df_cleaned2.csv].[PAY_AMT2]' />
+          <map key='[PAY_AMT3]' value='[df_cleaned2.csv].[PAY_AMT3]' />
+          <map key='[PAY_AMT4]' value='[df_cleaned2.csv].[PAY_AMT4]' />
+          <map key='[PAY_AMT5]' value='[df_cleaned2.csv].[PAY_AMT5]' />
+          <map key='[PAY_AMT6]' value='[df_cleaned2.csv].[PAY_AMT6]' />
+          <map key='[PB1]' value='[df_cleaned3.csv].[PB1]' />
+          <map key='[PB2]' value='[df_cleaned3.csv].[PB2]' />
+          <map key='[PB3]' value='[df_cleaned3.csv].[PB3]' />
+          <map key='[PB4]' value='[df_cleaned3.csv].[PB4]' />
+          <map key='[PB5]' value='[df_cleaned3.csv].[PB5]' />
+          <map key='[PB6]' value='[df_cleaned3.csv].[PB6]' />
+          <map key='[SEX]' value='[df_cleaned1.csv].[SEX]' />
+          <map key='[default payment next month]' value='[df_cleaned2.csv].[default payment next month]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¥&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¥&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¥&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIMIT_BAL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LIMIT_BAL]</local-name>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias>LIMIT_BAL</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SEX</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SEX]</local-name>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias>SEX</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EDUCATION</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EDUCATION]</local-name>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias>EDUCATION</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARRIAGE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MARRIAGE]</local-name>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias>MARRIAGE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AGE]</local-name>
+            <parent-name>[df_cleaned1.csv]</parent-name>
+            <remote-alias>AGE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (df_cleaned2.csv)]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIMIT_BAL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LIMIT_BAL (df_cleaned2.csv)]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>LIMIT_BAL</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_0</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_0]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_0</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_2]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_2</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_3]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_3</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_4]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_4</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_5</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_5]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_5</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_6</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_6]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_6</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BILL_AMT1]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>BILL_AMT1</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BILL_AMT2]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>BILL_AMT2</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BILL_AMT3]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>BILL_AMT3</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BILL_AMT4]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>BILL_AMT4</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT5</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BILL_AMT5]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>BILL_AMT5</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT6</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BILL_AMT6]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>BILL_AMT6</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_AMT1]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_AMT1</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_AMT2]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_AMT2</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_AMT3]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_AMT3</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_AMT4]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_AMT4</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT5</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_AMT5]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_AMT5</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT6</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PAY_AMT6]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>PAY_AMT6</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>default payment next month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[default payment next month]</local-name>
+            <parent-name>[df_cleaned2.csv]</parent-name>
+            <remote-alias>default payment next month</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (df_cleaned3.csv)]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIMIT_BAL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LIMIT_BAL (df_cleaned3.csv)]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>LIMIT_BAL</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PB1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PB1]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>PB1</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PB2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PB2]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>PB2</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PB3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PB3]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>PB3</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PB4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PB4]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>PB4</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PB5</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PB5]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>PB5</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PB6</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PB6]</local-name>
+            <parent-name>[df_cleaned3.csv]</parent-name>
+            <remote-alias>PB6</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Bill Amt1' datatype='integer' name='[BILL_AMT1]' role='measure' type='quantitative' />
+      <column caption='Bill Amt2' datatype='integer' name='[BILL_AMT2]' role='measure' type='quantitative' />
+      <column caption='Bill Amt3' datatype='integer' name='[BILL_AMT3]' role='measure' type='quantitative' />
+      <column caption='Bill Amt4' datatype='integer' name='[BILL_AMT4]' role='measure' type='quantitative' />
+      <column caption='Bill Amt5' datatype='integer' name='[BILL_AMT5]' role='measure' type='quantitative' />
+      <column caption='Bill Amt6' datatype='integer' name='[BILL_AMT6]' role='measure' type='quantitative' />
+      <column caption='Education' datatype='integer' name='[EDUCATION]' role='measure' type='quantitative' />
+      <column caption='F1 (df cleaned2.csv)' datatype='integer' name='[F1 (df_cleaned2.csv)]' role='measure' type='quantitative' />
+      <column caption='F1 (df cleaned3.csv)' datatype='integer' name='[F1 (df_cleaned3.csv)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='LIMIT BAL (df cleaned2.csv)' datatype='integer' name='[LIMIT_BAL (df_cleaned2.csv)]' role='measure' type='quantitative' />
+      <column caption='LIMIT BAL (df cleaned3.csv)' datatype='integer' name='[LIMIT_BAL (df_cleaned3.csv)]' role='measure' type='quantitative' />
+      <column caption='Limit Bal' datatype='integer' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+      <column caption='Marriage' datatype='integer' name='[MARRIAGE]' role='measure' type='quantitative' />
+      <column caption='Pay 0' datatype='integer' name='[PAY_0]' role='measure' type='quantitative' />
+      <column caption='Pay 2' datatype='integer' name='[PAY_2]' role='measure' type='quantitative' />
+      <column caption='Pay 3' datatype='integer' name='[PAY_3]' role='measure' type='quantitative' />
+      <column caption='Pay 4' datatype='integer' name='[PAY_4]' role='measure' type='quantitative' />
+      <column caption='Pay 5' datatype='integer' name='[PAY_5]' role='measure' type='quantitative' />
+      <column caption='Pay 6' datatype='integer' name='[PAY_6]' role='measure' type='quantitative' />
+      <column caption='Pay Amt1' datatype='integer' name='[PAY_AMT1]' role='measure' type='quantitative' />
+      <column caption='Pay Amt2' datatype='integer' name='[PAY_AMT2]' role='measure' type='quantitative' />
+      <column caption='Pay Amt3' datatype='integer' name='[PAY_AMT3]' role='measure' type='quantitative' />
+      <column caption='Pay Amt4' datatype='integer' name='[PAY_AMT4]' role='measure' type='quantitative' />
+      <column caption='Pay Amt5' datatype='integer' name='[PAY_AMT5]' role='measure' type='quantitative' />
+      <column caption='Pay Amt6' datatype='integer' name='[PAY_AMT6]' role='measure' type='quantitative' />
+      <column caption='SEX (bin)' datatype='integer' name='[SEX (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-3' formula='[SEX]' peg='0' size='0.303' />
+      </column>
+      <column datatype='integer' name='[SEX]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='df_cleaned1.csv' datatype='table' name='[__tableau_internal_object_id__].[df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C]' role='measure' type='quantitative' />
+      <column caption='Default Payment Next Month' datatype='integer' name='[default payment next month]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='df_cleaned1.csv' id='df_cleaned1.csv_3F8C67D7D9AA48E8B2772BF482A3EE0C'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[df_cleaned1.csv].[F1]' />
+                    <expression op='[df_cleaned3.csv].[F1]' />
+                  </expression>
+                </clause>
+                <relation join='inner' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[df_cleaned1.csv].[F1]' />
+                      <expression op='[df_cleaned2.csv].[F1]' />
+                    </expression>
+                  </clause>
+                  <relation connection='textscan.0xnm7jd0rkhfvq1141ogc1xu0954' name='df_cleaned1.csv' table='[df_cleaned1#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                      <column datatype='integer' name='F1' ordinal='0' />
+                      <column datatype='integer' name='LIMIT_BAL' ordinal='1' />
+                      <column datatype='integer' name='SEX' ordinal='2' />
+                      <column datatype='integer' name='EDUCATION' ordinal='3' />
+                      <column datatype='integer' name='MARRIAGE' ordinal='4' />
+                      <column datatype='integer' name='AGE' ordinal='5' />
+                    </columns>
+                  </relation>
+                  <relation connection='textscan.04xag3r054rh7618k3dyj1mur08h' name='df_cleaned2.csv' table='[df_cleaned2#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                      <column datatype='integer' name='F1' ordinal='0' />
+                      <column datatype='integer' name='ID' ordinal='1' />
+                      <column datatype='integer' name='LIMIT_BAL' ordinal='2' />
+                      <column datatype='integer' name='PAY_0' ordinal='3' />
+                      <column datatype='integer' name='PAY_2' ordinal='4' />
+                      <column datatype='integer' name='PAY_3' ordinal='5' />
+                      <column datatype='integer' name='PAY_4' ordinal='6' />
+                      <column datatype='integer' name='PAY_5' ordinal='7' />
+                      <column datatype='integer' name='PAY_6' ordinal='8' />
+                      <column datatype='integer' name='BILL_AMT1' ordinal='9' />
+                      <column datatype='integer' name='BILL_AMT2' ordinal='10' />
+                      <column datatype='integer' name='BILL_AMT3' ordinal='11' />
+                      <column datatype='integer' name='BILL_AMT4' ordinal='12' />
+                      <column datatype='integer' name='BILL_AMT5' ordinal='13' />
+                      <column datatype='integer' name='BILL_AMT6' ordinal='14' />
+                      <column datatype='integer' name='PAY_AMT1' ordinal='15' />
+                      <column datatype='integer' name='PAY_AMT2' ordinal='16' />
+                      <column datatype='integer' name='PAY_AMT3' ordinal='17' />
+                      <column datatype='integer' name='PAY_AMT4' ordinal='18' />
+                      <column datatype='integer' name='PAY_AMT5' ordinal='19' />
+                      <column datatype='integer' name='PAY_AMT6' ordinal='20' />
+                      <column datatype='integer' name='default payment next month' ordinal='21' />
+                    </columns>
+                  </relation>
+                </relation>
+                <relation connection='textscan.0d7hk830n0vn5y13kbrt20wi9yf8' name='df_cleaned3.csv' table='[df_cleaned3#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='integer' name='LIMIT_BAL' ordinal='1' />
+                    <column datatype='integer' name='PB1' ordinal='2' />
+                    <column datatype='integer' name='PB2' ordinal='3' />
+                    <column datatype='integer' name='PB3' ordinal='4' />
+                    <column datatype='integer' name='PB4' ordinal='5' />
+                    <column datatype='integer' name='PB5' ordinal='6' />
+                    <column datatype='integer' name='PB6' ordinal='7' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Age vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column datatype='integer' name='[AGE]' role='measure' type='quantitative' />
+            <column caption='Limit Bal' datatype='integer' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column-instance column='[AGE]' derivation='None' name='[none:AGE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LIMIT_BAL]' derivation='None' name='[none:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:AGE:qk]' included-values='in-range'>
+            <min>21</min>
+            <max>79</max>
+          </filter>
+          <slices>
+            <column>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:AGE:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:AGE:qk]</cols>
+      </table>
+      <simple-id uuid='{774DCD96-150A-40EE-907C-01CFF64ECA37}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Gender vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column caption='Limit Bal' datatype='integer' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column caption='SEX (bin)' datatype='integer' name='[SEX (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-3' formula='[SEX]' peg='0' size='0.303' />
+            </column>
+            <column datatype='integer' name='[SEX]' role='measure' type='quantitative' />
+            <column-instance column='[LIMIT_BAL]' derivation='None' name='[none:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SEX (bin)]' derivation='None' name='[none:SEX (bin):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:SEX (bin):ok]</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</cols>
+        <show-full-range>
+          <column>[federated.0urnys309fqrla12p8hc80hhzxwb].[SEX (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{9BCBD7F5-E614-4422-A142-B28DF9BEDA01}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Education vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column caption='Education' datatype='integer' name='[EDUCATION]' role='measure' type='quantitative' />
+            <column caption='Limit Bal' datatype='integer' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column-instance column='[EDUCATION]' derivation='None' name='[none:EDUCATION:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LIMIT_BAL]' derivation='None' name='[none:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:EDUCATION:qk]' value='54' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:EDUCATION:qk]</cols>
+      </table>
+      <simple-id uuid='{E3DBA5CA-5A15-439D-B772-BBB78BA75639}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Marriage Status vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column caption='Limit Bal' datatype='integer' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column caption='Marriage' datatype='integer' name='[MARRIAGE]' role='measure' type='quantitative' />
+            <column-instance column='[LIMIT_BAL]' derivation='None' name='[none:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MARRIAGE]' derivation='None' name='[none:MARRIAGE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Heatmap' />
+          </pane>
+        </panes>
+        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL:qk]</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:MARRIAGE:qk]</cols>
+      </table>
+      <simple-id uuid='{8585A772-6911-43F3-B8DE-64DD3350F4FC}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Paymet Amount over 6 months vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column caption='LIMIT BAL (df cleaned2.csv)' datatype='integer' name='[LIMIT_BAL (df_cleaned2.csv)]' role='measure' type='quantitative' />
+            <column caption='Pay Amt1' datatype='integer' name='[PAY_AMT1]' role='measure' type='quantitative' />
+            <column caption='Pay Amt2' datatype='integer' name='[PAY_AMT2]' role='measure' type='quantitative' />
+            <column caption='Pay Amt3' datatype='integer' name='[PAY_AMT3]' role='measure' type='quantitative' />
+            <column caption='Pay Amt4' datatype='integer' name='[PAY_AMT4]' role='measure' type='quantitative' />
+            <column caption='Pay Amt5' datatype='integer' name='[PAY_AMT5]' role='measure' type='quantitative' />
+            <column caption='Pay Amt6' datatype='integer' name='[PAY_AMT6]' role='measure' type='quantitative' />
+            <column-instance column='[LIMIT_BAL (df_cleaned2.csv)]' derivation='None' name='[none:LIMIT_BAL (df_cleaned2.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PAY_AMT1]' derivation='None' name='[none:PAY_AMT1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PAY_AMT2]' derivation='None' name='[none:PAY_AMT2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PAY_AMT3]' derivation='None' name='[none:PAY_AMT3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PAY_AMT4]' derivation='None' name='[none:PAY_AMT4:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PAY_AMT5]' derivation='None' name='[none:PAY_AMT5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PAY_AMT6]' derivation='None' name='[none:PAY_AMT6:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT1:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>873552</max>
+          </filter>
+          <slices>
+            <column>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT1:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL (df_cleaned2.csv):qk]' scope='cols' value='LIMIT BAL ' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT3:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT4:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT5:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT6:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>([federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT1:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT2:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT3:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT4:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT5:qk] + [federated.0urnys309fqrla12p8hc80hhzxwb].[none:PAY_AMT6:qk])))))</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL (df_cleaned2.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{D9E88EF3-CAEC-438B-AC6D-235554D6E82B}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Default Payment vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column caption='LIMIT BAL (df cleaned2.csv)' datatype='integer' name='[LIMIT_BAL (df_cleaned2.csv)]' role='measure' type='quantitative' />
+            <column caption='Default Payment Next Month' datatype='integer' name='[default payment next month]' role='measure' type='quantitative' />
+            <column-instance column='[LIMIT_BAL (df_cleaned2.csv)]' derivation='None' name='[none:LIMIT_BAL (df_cleaned2.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[default payment next month]' derivation='Sum' name='[sum:default payment next month:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0urnys309fqrla12p8hc80hhzxwb].[sum:default payment next month:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>881</max>
+          </filter>
+          <slices>
+            <column>[federated.0urnys309fqrla12p8hc80hhzxwb].[sum:default payment next month:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL (df_cleaned2.csv):qk]' scope='cols' value='LIMIT BAL' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>[federated.0urnys309fqrla12p8hc80hhzxwb].[sum:default payment next month:qk]</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL (df_cleaned2.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{D8B5F8CF-7F9F-4E27-A4D9-6F2BB2FA9DA6}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Payment Behavior vs. Limit Balance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+            <column caption='LIMIT BAL (df cleaned3.csv)' datatype='integer' name='[LIMIT_BAL (df_cleaned3.csv)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[PB1]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[PB2]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[PB3]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[PB4]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[PB5]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[PB6]' role='measure' type='quantitative' />
+            <column-instance column='[PB1]' derivation='Avg' name='[avg:PB1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PB2]' derivation='Avg' name='[avg:PB2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PB3]' derivation='Avg' name='[avg:PB3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PB4]' derivation='Avg' name='[avg:PB4:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PB5]' derivation='Avg' name='[avg:PB5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PB6]' derivation='Avg' name='[avg:PB6:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LIMIT_BAL (df_cleaned3.csv)]' derivation='None' name='[none:LIMIT_BAL (df_cleaned3.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB1:qk]' scope='rows' value='PB1' />
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB2:qk]' scope='rows' value='PB2' />
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB3:qk]' scope='rows' value='PB3' />
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB4:qk]' scope='rows' value='PB4' />
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB5:qk]' scope='rows' value='PB5' />
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB6:qk]' scope='rows' value='PB6' />
+            <format attr='title' class='0' field='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL (df_cleaned3.csv):qk]' scope='cols' value='LIMIT BAL' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB3:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB4:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB5:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB6:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>([federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB1:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB2:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB3:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB4:qk] + ([federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB5:qk] + [federated.0urnys309fqrla12p8hc80hhzxwb].[avg:PB6:qk])))))</rows>
+        <cols>[federated.0urnys309fqrla12p8hc80hhzxwb].[none:LIMIT_BAL (df_cleaned3.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{8EB48FE4-244C-4A72-87C3-0AC01DD1F5E5}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+        <column datatype='integer' name='[AGE]' role='measure' type='quantitative' />
+        <column-instance column='[AGE]' derivation='None' name='[none:AGE:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='22' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='20' type-v2='layout-basic' w='98400' x='800' y='1000'>
+              <zone h='36750' id='5' name='Sheet 1' w='32799' x='800' y='13250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='6' name='Sheet 2' w='32801' x='66399' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='36750' id='7' name='Sheet 3' w='32801' x='66399' y='13250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='40500' id='8' name='Sheet 4' w='32799' x='800' y='58500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='12250' id='13' type-v2='text' w='98400' x='800' y='1000'>
+                <formatted-text>
+                  <run>How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+Sub - Q1:  To gain insight into credit limit determination from a bank’s perspective, I plan to investigate whether gender, age, education, and marital status impact available credit. Specifically, I aim to identify whether certain demographics should be granted higher credit limits and determine if any correlations exist between these variables and available credit. I will analyze each variable against available credit, examining factors such as whether gender influences credit availability and if elder individuals tend to have higher credit limits. Subsequently, I will combine and group these sub-comparisons to identify any relationships that may exist. </run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18375' id='14' is-scaled='1' param='Image/Age.png' type-v2='bitmap' w='32800' x='33599' y='13250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24000' id='15' is-scaled='1' param='Image/Education.jpeg' type-v2='bitmap' w='32800' x='33599' y='31625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='21688' id='16' is-scaled='1' param='Image/Marriage Status.jpeg' type-v2='bitmap' w='32800' x='33599' y='55625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='21687' id='17' is-scaled='1' param='Image/Gender.png' type-v2='bitmap' w='32800' x='33599' y='77313'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8500' id='23' name='Sheet 1' param='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:AGE:qk]' type-v2='filter' values='database' w='32799' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='24' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='12250' id='13' type-v2='text' w='98400' x='800' y='1000'>
+                  <formatted-text>
+                    <run>How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+Sub - Q1:  To gain insight into credit limit determination from a bank’s perspective, I plan to investigate whether gender, age, education, and marital status impact available credit. Specifically, I aim to identify whether certain demographics should be granted higher credit limits and determine if any correlations exist between these variables and available credit. I will analyze each variable against available credit, examining factors such as whether gender influences credit availability and if elder individuals tend to have higher credit limits. Subsequently, I will combine and group these sub-comparisons to identify any relationships that may exist. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8500' id='23' name='Sheet 1' param='[federated.0urnys309fqrla12p8hc80hhzxwb].[none:AGE:qk]' type-v2='filter' values='database' w='32799' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36750' id='5' is-fixed='true' name='Sheet 1' w='32799' x='800' y='13250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='139' h='18375' id='26' is-fixed='true' is-scaled='1' param='Image/Age 1.png' type-v2='bitmap' w='32800' x='33599' y='13250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36750' id='7' is-fixed='true' name='Sheet 3' w='32801' x='66399' y='13250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='184' h='24000' id='27' is-fixed='true' is-scaled='1' param='Image/Education 1.jpeg' type-v2='bitmap' w='32800' x='33599' y='31625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='6' is-fixed='true' name='Sheet 2' w='32801' x='66399' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='166' h='21688' id='28' is-fixed='true' is-scaled='1' param='Image/Marriage Status 1.jpeg' type-v2='bitmap' w='32800' x='33599' y='55625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40500' id='8' is-fixed='true' name='Sheet 4' w='32799' x='800' y='58500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='165' h='21687' id='29' is-fixed='true' is-scaled='1' param='Image/Gender 1.png' type-v2='bitmap' w='32800' x='33599' y='77313'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D4A2BB55-9E99-4BDC-8916-04CAFBCEABC9}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='df_cleaned1' name='federated.0urnys309fqrla12p8hc80hhzxwb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0urnys309fqrla12p8hc80hhzxwb'>
+        <column caption='Default Payment Next Month' datatype='integer' name='[default payment next month]' role='measure' type='quantitative' />
+        <column-instance column='[default payment next month]' derivation='Sum' name='[sum:default payment next month:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='16' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='11' type-v2='layout-basic' w='98400' x='800' y='1000'>
+              <zone h='67375' id='3' name='Sheet 5' w='49200' x='50000' y='31625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='58000' id='5' name='Sheet 6' w='49200' x='800' y='31625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='30625' id='6' type-v2='text' w='52502' x='46698' y='1000'>
+                <formatted-text>
+                  <run>How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+Sub - Q2: I will explore whether credit utilization patterns impact credit availability by comparing individuals with similar bills but differing bill payment patterns throughout the research period. While it is clear that payment behaviour influences credit availability, I aim to identify any correlation between the number of late payments and available credit, considering that unexpected circumstances may impact one’s ability to make payments on time.</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='30625' id='7' is-scaled='1' param='Image/Default Payment.png' type-v2='bitmap' w='21798' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='30625' id='8' is-scaled='1' param='Image/Payment Amount.jpeg' type-v2='bitmap' w='24100' x='22598' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9375' id='14' name='Sheet 6' param='[federated.0urnys309fqrla12p8hc80hhzxwb].[sum:default payment next month:qk]' type-v2='filter' values='database' w='49200' x='800' y='89625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='17' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='237' h='30625' id='20' is-fixed='true' is-scaled='1' param='Image/Default Payment 1.png' type-v2='bitmap' w='21798' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='237' h='30625' id='19' is-fixed='true' is-scaled='1' param='Image/Payment Amount 1.jpeg' type-v2='bitmap' w='24100' x='22598' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='30625' id='6' type-v2='text' w='52502' x='46698' y='1000'>
+                  <formatted-text>
+                    <run>How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+Sub - Q2: I will explore whether credit utilization patterns impact credit availability by comparing individuals with similar bills but differing bill payment patterns throughout the research period. While it is clear that payment behaviour influences credit availability, I aim to identify any correlation between the number of late payments and available credit, considering that unexpected circumstances may impact one’s ability to make payments on time.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9375' id='14' name='Sheet 6' param='[federated.0urnys309fqrla12p8hc80hhzxwb].[sum:default payment next month:qk]' type-v2='filter' values='database' w='49200' x='800' y='89625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='58000' id='5' is-fixed='true' name='Sheet 6' w='49200' x='800' y='31625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='67375' id='3' is-fixed='true' name='Sheet 5' w='49200' x='50000' y='31625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1B240B8D-024B-449F-A382-BF0DC6DC5393}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='74000' id='3' name='Sheet 7' w='98400' x='800' y='25000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='24000' id='5' type-v2='text' w='49200' x='50000' y='1000'>
+            <formatted-text>
+              <run>How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+Sub - Q3: I plan to investigate how a client’s previous payment behaviour, such as only making minimum or partial bill payments, may affect credit availability. This will enable me to assess how banks should consider the associated risk. </run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='24000' id='6' is-scaled='1' param='Image/Payment Behaviour.jpeg' type-v2='bitmap' w='49200' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='9' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='184' forceUpdate='true' h='24000' id='11' is-fixed='true' is-scaled='1' param='Image/Payment Behaviour 1.jpeg' type-v2='bitmap' w='49200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='24000' id='5' type-v2='text' w='49200' x='50000' y='1000'>
+                  <formatted-text>
+                    <run>How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+Sub - Q3: I plan to investigate how a client’s previous payment behaviour, such as only making minimum or partial bill payments, may affect credit availability. This will enable me to assess how banks should consider the associated risk. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='74000' id='3' is-fixed='true' name='Sheet 7' w='98400' x='800' y='25000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{83F3F7A0-2BF7-4C19-845D-88B5BD320FAD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8604C251-0441-4B56-9BBD-696FBFC3143D}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A3CC76F3-7FDF-4287-BAE9-D03C65E5AE91}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{16A44913-9643-47B0-916F-F317E5441F4B}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F8E20D1C-3506-4926-A2B3-3C76B0BB7459}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{17B24CCD-92DC-4406-9C4D-8132B95C64F7}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{69B16BA1-E3FC-43D9-95C6-5B2B0349425B}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7F1084B9-CD69-4A2D-825F-65C078F18C40}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{BCD6EDCB-62F4-4FEC-8C82-389858DB386D}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{936787D4-B182-4DFC-AE4E-0FC7ED954CCC}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{92B14DBA-77BA-4D13-825C-5FAC86AB4E96}' />
+    </window>
+  </windows>
+</workbook>
