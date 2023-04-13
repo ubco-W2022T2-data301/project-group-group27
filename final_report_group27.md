@@ -127,6 +127,8 @@
 - age: it seems like majority of the people won't influence by the age group, but the people has more extreme performance which means more diverse of their action when they become older through plots.  
 
 ###  4. How does the amount of bill statements influence the repayment status ?
+![R4PLOT1](images/final_plots_Shirley/Q4(1).png)
+![R4PLOT2](images/final_plots_Shirley/Q4(2).png)
 - the topay(which is caculated by the billpay with the repay status) demostrate the stress of return for the future. Through the changes and comparasion between each topay by looking at the plots, it clealy shows that the more people borrow, the longer people return, the more stress people will have. As topay is increasing through time. 
 
 #### In conclusion through combination of all my research quesions, the best way to minimize the negative influence depends on your own condition is consider gender wise, people don't need to worry too much as they seems they can control themselves when they borrow, but male should pay more attention than female, education wise if you are in university or highschool you should focus more. marriage wise people who are not single or married should be more careful, and age wise if people are getting older they should plan from younger ages. Also, the less you borrow, the more chances you will have a better credit. Last, people should be careful about when they decide to return the money they lack, the ealier the better. 
