@@ -1,5 +1,5 @@
 ## Introduction
-- While most people know the rules for using credit cards, some individuals choose to exploit them fully. Our dataset focuses on studying default payments of credit card clients in Taiwan, using six data mining techniques to predict their creditworthiness. This information can help financial institutions manage risks by limiting clients falling into high-risk categories. Our group examines default payments from both financial institutions' and clients’ perspectives, analyzing sample clients' personal profiles, including gender, educational level, marital status, age, payment behavior, and credit utilization patterns. To address our research questions, we present various visualizations and summaries through a dashboard, which you can access here: [dashboards]( https://github.com/ubco-W2022T2-data301/project-group-group27/tree/main/dashboard)
+- While most people know the rules for using credit cards, some individuals choose to exploit them fully. Our dataset focuses on studying default payments of credit card clients in Taiwan, using six data mining techniques to predict their creditworthiness. This information can help financial institutions manage risks by limiting clients falling into high-risk categories. Our group examines default payments from both financial institutions' and clients’ perspectives, analyzing sample clients' personal profiles, including gender, educational level, marital status, age, payment behavior, and credit utilization patterns. To address our research questions, we present various visualizations and summaries through dashboards, which you can access here: [dashboards]( https://github.com/ubco-W2022T2-data301/project-group-group27/tree/main/dashboard)
 
 
 
@@ -10,9 +10,7 @@
 
 ## Exploratory Data Analysis
 - The exploratory data analysis (EDA) focused on generating plots to visualize the connection between age, education level, gender, and marital status with the limit balance. The distribution plot clearly illustrates that education level holds the most substantial correlation with credit score compared to the other variables. Specifically, a higher education level is associated with more reliable credit scores, and individuals aged between 30-50 tend to have higher credit scores. In the remaining project, the investigation will shift to analyzing payment behavior and default payment.
-
-
-
+-	The overall shape for plots that count the number of sample clients taking how many months to pay back their credit cards divided by gender, education level, and marital status through April to September in 2005 is mostly the same and no obvious correlation between each other is presented. 
 
 
 
