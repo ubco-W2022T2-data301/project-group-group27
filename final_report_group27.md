@@ -18,9 +18,28 @@
 
 
 
-## Research Question 1:
+## Research Question 1: How can banks minimize credit risk and maximize benefits when determining credit limits for clients, considering factors such as gender, age, education, marital status, payment behaviour, and credit utilization patterns?
+
+### The motivation for selecting this dataset originated from a conversation with a bank advisor who recommended keeping my spending below half of my credit limit. For instance, if my monthly credit limit is 3,000 dollars, I should strive to keep my expenses under 1,500 dollars per month. This conversation piqued my curiosity about how banks determine credit limits. Since credit is an essential component when making significant purchases like homes, cars, and education, understanding the factors that banks consider when setting credit limits is crucial.
+### Despite credit cards benefiting users, it is important to recognize that banks issue them because they can be profitable. As the fundamental concept behind credit is to loan money, inherent risks exist. Therefore, utilizing the given dataset, I aim to explore several sub-questions from a bank’s perspective:
+### 1. To gain insight into credit limit determination from a bank’s perspective, I plan to investigate whether gender, age, education, and marital status impact available credit. Specifically, I aim to identify whether certain demographics should be granted higher credit limits and determine if any correlations exist between these variables and available credit. I will analyze each variable against available credit, examining factors such as whether gender influences credit availability and if elder individuals tend to have higher credit limits. Subsequently, I will combine and group these sub-comparisons to identify any relationships that may exist.
+
+![Q1](images/final_plots_Betty/Research_Q1.png)
+
+- To better understand the data, I used predefined functions to calculate the mean, minimum, and maximum values for all distinct variables. Then, I created visualizations primarily using violin plots and distribution plots. Finally, I calculated the correlation between each variable (education level, marital status, age, and gender) and the available credit. Although no strong correlation was found between these variables, education level displayed the strongest correlation. As a result of the weak correlations, it was more informative to observe relationships from the visualizations. For instance, the violin plot clearly visualized the median and density distribution. The median values for males and females are quite similar, although females have slightly higher values. Additionally, the male group exhibits a greater concentration of lower credit balances, while females show higher concentrations around the median values. In the below distribution plot, similar information is shown with information on the central tendency of the data (such as mean, median, or mode), as well as the spread or variability of the data. Based on the age distribution and violin plot, individuals under 30 were considered the bank's most risky clients, while those between 30 and 50 years old were deemed safer. Regarding marital status, the distribution and violin plot indicated that married individuals were considered safer clients compared to single individuals.
+
+### 2. I will explore whether credit utilization patterns impact credit availability by comparing individuals with similar bills but differing bill payment patterns throughout the research period. While it is clear that payment behaviour influences credit availability, I aim to identify any correlation between the number of late payments and available credit, considering that unexpected circumstances may impact one’s ability to make payments on time.
+
+![Q2](images/final_plots_Betty/Research_Q2.png)
+
+- Based on the calculations and visualizations, it is apparent that defaulting on payments has a negative impact on the credit score. On the other hand, timely payments result in a higher amount of available credit, and credit scores decrease as payment delays increase. Nonetheless, there are many other factors to take into account, so the correlation is not particularly strong. Nevertheless, the data does indicate a clear relationship between payment history and credit score.
 
 
+### 3. I plan to investigate how a client’s previous payment behaviour, such as only making minimum or partial bill payments, may affect credit availability. This will enable me to assess how banks should consider the associated risk.¶
+
+![Q3](images/final_plots_Betty/Research_Q3.png)
+
+- According to the correlation and plot analysis, there is a weak correlation between payment behavior and credit limit. The correlation value is approximately 0.22-0.25 for individual months and around 0.25 on average. Based on the plot, it appears that the unpaid amount does not have an impact on the available credit.
 
 
 
