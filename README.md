@@ -6,6 +6,13 @@
 
 Details for Milestone are available on Canvas (left sidebar, Course Project).
 
+- Milestone 1: Form team and find dataset.
+- Milestone 2: Load the dataset, explain it, and define research questions.
+- Milestone 3: Exploratory Data Analysis (EDA).
+- Milestone 4: Visualizations, analysis, and pipeline. 
+- Milestone 5: Present the Dashboard!
+- Milestone 6: Address feedback and refine project. 
+
 ## Describe your topic/interest in about 150-200 words
 
 ##### We hope that by participating in this project, we will be able to ask descriptive or exploratory questions and attain the ability to explore data, which may include, but are not limited to, visualizations, analyzing the data and producing results using a dashboard with the analytics project. Moreover, it is an excellent opportunity to cooperate with different people using Git and Github. Since working alone on a real-life project is a big challenge, it's better to learn how to communicate with others efficiently and how to work with a team. Also, the project provides a great platform to practice all the techniques we studied in class, such as Python, markdown, terminal, Jupyter lab, Git and Github. As a learning opportunity, it is an excellent way for us to find out what is useful in data analysis and what we are missing or do not understand.m the lecture. This is a fairly interesting topic because it includes 24 attributes which give us a broader view of this specific topic. We can do analysis from different perspectives, and the dataset can contribute to everyone’s specific research questions. Moreover, credit is an essential part of our lives. Our team is interested in learning how the credit card system determines which consumers are trustworthy and which are not and how it determines whether to increase or decrease the available credit limit. Considering that credit is always related to loans, the system should consider multiple perspectives to reduce the risk, which could include broader topics of risk management for financial institutions, such as filtering out unreliable clients. Finally, we could totally imagine building a user-facing dashboard with this dataset since it contains various aspects of data that can be explored. We would like it to have a precise formation and contain data that needs to be presented, so the dashboard is user-friendly, interactive, and informative.
@@ -28,10 +35,13 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 <img src ="images/test.png" width="100px">
 
+### Dashboard 3
+![DashboardScreenshot3](images/dashboard_Remy.png)
+
 
 ## References
 
-{Add your stuff here}
+[https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 
 
 
