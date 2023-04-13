@@ -1,6 +1,6 @@
 def method_chaining (data):
     
-    data = df_cleaned
+    data
     method_chain_data = (data.dtypes
                         .apply(lambda x: check_delim(data))
                         .apply(lambda x: ~data['EDUCATION'].isin([0, 5, 6]))
