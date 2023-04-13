@@ -11,6 +11,7 @@
 ## Exploratory Data Analysis
 - The exploratory data analysis (EDA) focused on generating plots to visualize the connection between age, education level, gender, and marital status with the limit balance. The distribution plot clearly illustrates that education level holds the most substantial correlation with credit score compared to the other variables. Specifically, a higher education level is associated with more reliable credit scores, and individuals aged between 30-50 tend to have higher credit scores. In the remaining project, the investigation will shift to analyzing payment behavior and default payment.
 -	The overall shape for plots that count the number of sample clients taking how many months to pay back their credit cards divided by gender, education level, and marital status through April to September in 2005 is mostly the same and no obvious correlation between each other is presented. 
+- The highlight for EDA in analysis 3 is that it uses different kinds of plots when finding the correlation between the same two variables which makes my observation more diverse and more accurate. Some visualization included how credit and repayment status changes because of different people’s situation and from here the best solution for maintaining the best credit is able to be found.
 
 
 
