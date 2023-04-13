@@ -1,6 +1,6 @@
-# Group 27 - {Short snappy Title of your project}
+# Group 27 - Default Payments Investigation
 
-- Your title can change over time.
+- Investigating credit card clients' delayed payments in Taiwan from April 2005 to September 2005. 
 
 ## Milestones
 
@@ -26,8 +26,8 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 ## Team Members
 
 - Person 1: one sentence about you!
-- Person 2: My name is Shirley, I am a third-year student majoring in statistics, and I like to play tennis. 
-- Person 3: My name is Remy, I am a second-year psychology student, and my hobby is watching Netflix.
+- Person 2: My name is Remy, I am a second-year psychology student, and my hobby is watching Netflix.
+- Person 3: My name is Shirley, I am a third-year student majoring in statistics, and I like to play tennis.
 
 ## Images
 
@@ -35,8 +35,8 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 <img src ="images/test.png" width="100px">
 
-### Dashboard 3
-![DashboardScreenshot3](images/dashboard_Remy.png)
+### Dashboard 2
+![DashboardScreenshot2](images/dashboard_Remy.png)
 
 
 ## References
