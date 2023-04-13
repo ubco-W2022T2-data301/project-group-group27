@@ -25,18 +25,20 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 ## Team Members
 
-- Person 1: one sentence about you!
+- Person 1: My name is Betty, I am a second-year student majoring in Mathematics, and I enjoy playing music and snowboarding. 
 - Person 2: My name is Remy, I am a second-year psychology student, and my hobby is watching Netflix.
 - Person 3: My name is Shirley, I am a third-year student majoring in statistics, and I like to play tennis.
 
 ## Images
 
-{You should use this area to add a screenshot of an interesting plot, or of your dashboard}
-
-<img src ="images/test.png" width="100px">
+### Dashboard 1
+![DashboardScreenshot1](images/dashboard_Betty.png)
 
 ### Dashboard 2
 ![DashboardScreenshot2](images/dashboard_Remy.png)
+
+### Dashboard 3
+![DashboardScreenshot3](images/dashboard_Shirley.png)
 
 
 ## References
