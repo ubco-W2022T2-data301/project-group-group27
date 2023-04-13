@@ -9,9 +9,8 @@ def method_chaining(data_methodchaining):
     )
     
     dataframe1 = (
-        dataframe.dropna(axis = 0).drop(columns = 'index')
-        .apply(lambda x: ~x['EDUCATION'].isin([0, 5, 6]))
-        .apply(lambda x: ~x['MARRIAGE'].isin([0]))
+        dataframe.dropna(axis = 0)
+        .drop(columns = 'index')
     )
     
     return dataframe1
