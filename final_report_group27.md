@@ -39,6 +39,8 @@
 
 - According to the correlation and plot analysis, there is a weak correlation between payment behavior and credit limit. The correlation value is approximately 0.22-0.25 for individual months and around 0.25 on average. Based on the plot, it appears that the unpaid amount does not have an impact on the available credit.
 
+#### The full analysis notebook including the code and the data can be found [here]( https://github.com/ubco-W2022T2-data301/project-group-group27/blob/main/analysis/analysis_Betty.ipynb).
+
 
 
 
@@ -130,6 +132,7 @@
 - the topay(which is caculated by the billpay with the repay status) demostrate the stress of return for the future. Through the changes and comparasion between each topay by looking at the plots, it clealy shows that the more people borrow, the longer people return, the more stress people will have. As topay is increasing through time. 
 
 #### In conclusion through combination of all my research quesions, the best way to minimize the negative influence depends on your own condition is consider gender wise, people don't need to worry too much as they seems they can control themselves when they borrow, but male should pay more attention than female, education wise if you are in university or highschool you should focus more. marriage wise people who are not single or married should be more careful, and age wise if people are getting older they should plan from younger ages. Also, the less you borrow, the more chances you will have a better credit. Last, people should be careful about when they decide to return the money they lack, the ealier the better. 
+#### The full analysis notebook including the code and the data can be found [here]( https://github.com/ubco-W2022T2-data301/project-group-group27/blob/main/analysis/analysis_Shirley.ipynb).
 
 
 
