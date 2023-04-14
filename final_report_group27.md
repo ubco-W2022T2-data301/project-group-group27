@@ -157,6 +157,11 @@
 
 ## Conclusion 
 
+### Our project has provided valuable insights into the credit card industry in Taiwan, and we summarize our observations from the visualizations and calculations here. To make this conclusion more clear and concise, we will break it down into three parts. 
+- We did not find a strong corelation between the limit balance and age, gender, marital status, and education level. However, we did observe some relationships between these variables. For instance, clients between 30-50 years old present the lowest risk, while those under 20 years old are usually the riskiest. Additionally, we identified two distinct groups with specific patterns. The first group consists of university males aged 20-30 who tend to have a higher risk, while the second group comprises graduate females (except 20-30 years old) who have a lower risk regardless of their marital status. 
+- We found that default payment has the highest correlation with limit balance among all the attributes. Clients who pay on time are considered more reliable, while those who delay payments are deemed less trustworthy. We also observed that payment behaviour affects the limit balance, but relationship is not too strong. Payment behaviour refers to how much of the bill clients pay back each time. Clients who pay only a portion of the bill or the minimum amount will have some debt left on their credit card.
+- We observed that clients who borrow less tend to have better credit scores. 
+Overall, our project highlights the importance of responsible credit card use and emphasizes the need for ongoing monitoring and analysis the maintain a health financial ecosystem. 
 
 
 
